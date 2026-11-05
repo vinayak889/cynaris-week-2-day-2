@@ -1,8 +1,8 @@
-mobile responsiveness
+## mobile responsiveness
 ![alt text](mobile.png)
 
-tablet responsiveness
+## tablet responsiveness
 ![alt text](tablet.png)'
 
-desktop responsiveness
+## desktop responsiveness
 ![alt text](desktop.png)
