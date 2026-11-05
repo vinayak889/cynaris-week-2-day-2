@@ -1,0 +1,356 @@
+
+/* ======================================
+   Responsive Design — Week 2 Day 2
+   Mobile-first CSS
+   ====================================== */
+
+/* Base styles: Mobile (320px and above) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 75rem;
+  margin-inline: auto;
+}
+
+.section-padding {
+  padding-block: 3.5rem;
+}
+
+/* Navigation - Flexbox */
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  min-height: 4.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding-block: 0.75rem;
+}
+
+.logo {
+  color: #4f46e5;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.nav-links {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.nav-links a:hover,
+.footer-links a:hover {
+  color: #4f46e5;
+}
+
+.nav-button {
+  display: none;
+  padding: 0.6rem 1rem;
+  background: #4f46e5;
+  color: #ffffff;
+  border-radius: 0.4rem;
+}
+
+/* Hero Section */
+.hero {
+  padding-block: 3.5rem;
+  background: #f5f5ff;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.eyebrow {
+  color: #4f46e5;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  margin-bottom: 0.6rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.hero-text > p:not(.eyebrow) {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  max-width: 35rem;
+}
+
+.button {
+  display: inline-block;
+  background: #4f46e5;
+  color: #ffffff;
+  padding: 0.8rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.button:hover,
+.nav-button:hover {
+  background: #3730a3;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.image-placeholder {
+  min-height: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #818cf8, #4f46e5);
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Section headings */
+.section-heading {
+  text-align: center;
+  max-width: 38rem;
+  margin: 0 auto 2rem;
+}
+
+.section-heading h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-heading > p:last-child {
+  color: #6b7280;
+}
+
+/* Features - CSS Grid */
+.features {
+  background: #ffffff;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #6b7280;
+}
+
+/* Testimonials */
+.testimonials {
+  background: #f9fafb;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+}
+
+.testimonial-card > p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.testimonial-card h3 {
+  font-size: 1rem;
+}
+
+.testimonial-card span {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+/* Footer */
+.footer {
+  background: #111827;
+  color: #ffffff;
+  padding-block: 1.5rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+/* Tablet: 768px and above */
+@media (min-width: 48rem) {
+  .section-padding {
+    padding-block: 4.5rem;
+  }
+
+  .navbar {
+    flex-wrap: nowrap;
+  }
+
+  .nav-links {
+    width: auto;
+    gap: 1.5rem;
+  }
+
+  .nav-button {
+    display: inline-block;
+  }
+
+  .hero-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-text,
+  .hero-image {
+    flex: 1;
+  }
+
+  .image-placeholder {
+    min-height: 20rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* Laptop: 1024px and above */
+@media (min-width: 64rem) {
+  .hero {
+    padding-block: 5rem;
+  }
+
+  .hero h1 {
+    max-width: 35rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .section-heading {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Large desktop: 1440px and above */
+@media (min-width: 90rem) {
+  .container {
+    max-width: 80rem;
+  }
+
+  .hero {
+    padding-block: 6rem;
+  }
+
+  .hero h1 {
+    font-size: 3.75rem;
+  }
+
+  .section-padding {
+    padding-block: 5.5rem;
+  }
+}
